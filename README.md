@@ -26,3 +26,13 @@
 
 - `.gitignore`:
   File containing all the folders/files to be ignored by git.
+
+### Run Initial Python Scripts for dataset segmentation
+
+ **To train with `notebook_color.ipynb`** 
+From VS Code terminal or notebook cell with:
+- Command for populating **rgb_color/** and **binary_color/** : `!python python_scripts/color_split_dataset.py`
+
+ **To train with `notebook_identity.ipynb`** 
+From VS Code terminal or notebook cell with:
+- Command for populating **rgb_identity/** and **binary_identity/** : `!python python_scripts/identity_split_dataset.py`
