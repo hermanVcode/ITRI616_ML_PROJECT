@@ -1,3 +1,6 @@
 # Ignore datasets
 /data/
 *.zip
+
+# Ignore virtual environment
+/venv/
