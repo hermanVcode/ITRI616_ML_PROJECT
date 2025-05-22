@@ -1,38 +1,29 @@
 # ITRI616_ML_PROJECT
 
-
 ## Deep Convolutional Neural Network (DCNN)
 ## Random Forest (RF)
 
 ### Overview of Notebooks
 
-- `notebook_color.ipynb`: 
-  For training a DCNN on RGB vs Grayscale images of the **same identities**, to evaluate the impact of **color**.
-  
-- `notebook_identity.ipynb`: 
-  For training a DCNN on RGB vs Grayscale images of **different identities**, to evaluate the combined effect of **identity and color** variation.
+- `notebook_identity.ipynb`:  
+  For training a DCNN on **binary grayscale portrait images** with **different identities** to evaluate the effect of identity variation and apply basic augmentations to improve generalization.
 
-- `notebook_dcnn_rf.ipynb`: 
-  Extraction of deep image features utilizing the trained **DCNN** for the training of a **RF classifier** with those features, to be used for both classification models:
-    -**same identities**
-    -**identity and color**
+- `notebook_dcnn_rf.ipynb`:  
+  Extraction of deep image features from the trained **DCNN**, followed by training a **Random Forest (RF)** classifier on those features for comparative evaluation and hybrid modeling.
 
 ### Dictionary for Spell Checker
 
-- `.cspell.json`:
-  **json** file containing common words used to avoid possible spell checking problems.
+- `.cspell.json`:  
+  JSON file containing common words used to avoid unnecessary spell checking warnings in the editor (e.g., model names, acronyms).
 
-### File to ignore commits
+### File to Ignore Commits
 
-- `.gitignore`:
-  File containing all the folders/files to be ignored by git.
+- `.gitignore`:  
+  Specifies which folders/files to exclude from version control (e.g., `venv/`, dataset folders, checkpoints).
 
-### Run Initial Python Scripts for dataset segmentation
+### Run Initial Python Scripts for Dataset Preparation
 
- **To train with `notebook_color.ipynb`** 
-From VS Code terminal or notebook cell with:
-- Command for populating **rgb_color/** and **binary_color/** : `!python python_scripts/color_split_dataset.py`
+To segment your binary dataset for identity-based training, run:
 
- **To train with `notebook_identity.ipynb`** 
-From VS Code terminal or notebook cell with:
-- Command for populating **rgb_identity/** and **binary_identity/** : `!python python_scripts/identity_split_dataset.py`
+```bash
+!python python_scripts/identity_split_dataset.py
