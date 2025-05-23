@@ -11,7 +11,7 @@ from PIL import Image
 # Cleaning preprocessed folder
 shutil.rmtree("data/img_align_preprocessed", ignore_errors=True)
 
-images_to_process = int(10000) # Amount of images to process  
+images_to_process = int(20000) # Amount of images to process  
 
 dir_processed_img = "data/img_align_preprocessed" # Path for storing processed images
 os.makedirs(dir_processed_img, exist_ok=True) # Checks if the target directory exists, if not it will create it
