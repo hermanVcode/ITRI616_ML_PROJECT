@@ -43,15 +43,16 @@ A Deep Convolutional Neural Network (DCNN) is used to extract deep features from
 1. **Create and activate a virtual environment** (recommended):
 
    **On Windows:**
-   - ```bash
+   - bash
    - python -m venv venv
    - venv\Scripts\activate
+  
    **On Mac/Linux:**
-   - ```bash
+   - bash
    - python3 -m venv venv
    - source venv/bin/activate
 2. **Install dependencies:**
-   - ```bash
+   - bash
    - pip install -r requirements.txt
 3. Preprocess the dataset:
    - Open the `preprocessing_image_size.py` script, and adjust the amount of samples in `images_to_process = int(`<amount_here>`)`.
